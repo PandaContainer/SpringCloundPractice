@@ -1,18 +1,19 @@
-package com.test.springcloud.consumer;
+package com.test.springcloud.consumer.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.client.RestTemplate;
+
+import com.test.springcloud.consumer.service.HelloService;
 
 @RestController
 public class ConsumerController {
 
 	@Autowired
-	RestTemplate restTemplate;
+	HelloService helloService;
 	
 	@GetMapping("/ribbon-consumer")
 	public String helloConsumer() {
-		return restTemplate.getForEntity("http://hello-service/hello", String.class).getBody();
+		return helloService.helloService();
 	}
 }

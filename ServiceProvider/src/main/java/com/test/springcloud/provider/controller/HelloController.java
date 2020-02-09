@@ -1,4 +1,6 @@
-package com.test.springcloud.provider;
+package com.test.springcloud.provider.controller;
+
+import java.util.Random;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -16,7 +18,13 @@ public class HelloController {
 	private Registration registration; // 服务注册
 
 	@GetMapping("/hello")
-	public String index() {
+	public String index() throws Exception {
+		
+		//模拟超时，hystrix默认超时时间是1000ms
+		int sleepTime = new Random().nextInt(3000);
+		logger.info("sleepTime:{}", sleepTime);
+		Thread.sleep(sleepTime);
+		
 		logger.info("/hello, host:" + registration.getHost() + ", service_id:" + registration.getServiceId() + ", port:"
 				+ registration.getPort());
 		return "Hello World";
