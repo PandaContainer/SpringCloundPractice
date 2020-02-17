@@ -14,6 +14,6 @@ public class ConsumerController {
 	
 	@GetMapping("/ribbon-consumer")
 	public String helloConsumer() {
-		return helloService.helloService();
+		return helloService.helloService("你好");
 	}
 }
