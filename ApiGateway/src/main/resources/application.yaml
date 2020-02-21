@@ -1,0 +1,13 @@
+#同一路径下的三个文件,当三种文件同时存在时,其实三个文件中的配置信息都会生效,
+#但是当三个文件中有配置信息冲突时,加载顺序是yml>yaml>properties,
+#所以优先级是:properties>yaml>yml,后加载的会覆盖先加载的文件
+
+#zuul必须使用YAML配置文件保证路由规则匹配有序性
+zuul:
+  routes:
+    user-service-ext:
+      path: /user-service/ext/**
+      serviceId: user-service-ext
+    user-service:
+      path: /user-service/**
+      serviceId: user-service
