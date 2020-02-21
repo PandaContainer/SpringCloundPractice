@@ -22,6 +22,7 @@ public class ConsumerController {
 		return helloService.hello();
 	}
 	
+	
 	@GetMapping("/feign-consumer2")
 	public String helloConsumer2() {
 		StringBuilder sb = new StringBuilder();
@@ -40,4 +41,5 @@ public class ConsumerController {
 		sb.append(refactorHelloService.hello(new com.test.springcloud.helloserviceapi.dto.User("MINI", 20))).append("<br>");
 		return sb.toString();
 	}
+
 }

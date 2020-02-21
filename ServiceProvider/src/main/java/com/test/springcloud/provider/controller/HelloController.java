@@ -37,7 +37,7 @@ public class HelloController {
 	}
 	
 	@GetMapping("/hello1")
-	public String hello(@RequestParam String name) {
+	public String hello(@RequestParam(required = true,defaultValue = "请传递name参数") String name) {
 		return "Hello " + name;
 	}
 	
@@ -49,5 +49,16 @@ public class HelloController {
 	@PostMapping("/hello3")
 	public String hello(@RequestBody User user) {
 		return "Hello " + user.getName() + ", " + user.getAge();
+	}
+	
+	/**
+	 * 当zuul配置为zuul.prefix=/api、zuul.strip-prefix=false、zuul.routes.api-a.strip-prefix不配置或配置为true
+	 * 不移除公共路由前缀,只移除具体服务路由前缀，访问该接口返回成功
+	 * @return
+	 */
+	@GetMapping("/api/hello4")
+	public String hello() {
+		// 访问zuul路由服务器地址：http://localhost:5555/api/api-a/hello4?accessToken=token
+		return "访问地址/api/hello4,测试zuul.prefix=/api、zuul.strip-prefix=false、zuul.routes.api-a.strip-prefix没配置,不移除公共路由前缀,只移除具体服务路由前缀";
 	}
 }
