@@ -33,7 +33,6 @@ public class AccessFilter extends ZuulFilter {
 			response.setContentType("text/html;charset=utf-8");
 			ctx.setSendZuulResponse(false);
 			ctx.setResponseBody("accessToken参数不能为空，没有访问权限!");
-			ctx.setResponseStatusCode(401);
 			return null;
 		}
 		logger.info("access token ok");
