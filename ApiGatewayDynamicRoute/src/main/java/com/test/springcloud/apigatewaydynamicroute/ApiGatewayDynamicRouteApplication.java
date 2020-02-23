@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Primary;
 
 /**
- * zuul动态路由
+ * zuul使用SpringCloudConfig动态配置实现动态路由功能
  * 
  * @author xuhon
  *

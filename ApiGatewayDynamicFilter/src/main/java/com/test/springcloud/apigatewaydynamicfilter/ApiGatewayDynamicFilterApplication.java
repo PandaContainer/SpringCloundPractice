@@ -13,7 +13,10 @@ import com.netflix.zuul.groovy.GroovyFileFilter;
 import com.test.springcloud.apigatewaydynamicfilter.configuration.DynamicLoadFilterProperties;
 
 /**
- * zuul使用Groovy脚本实现动态加载过滤器功能
+ * zuul使用Groovy脚本实现动态加载过滤器功能<br>
+ * 
+ * 目前还存在的问题:1.老版本删除Groovy脚本并不能从当前运行网关中移除该过滤器<br>
+ * 2.动态过滤器无法直接注入Spring容器中加载的实例来使用,使用SrpingApplicationUtils应该可以用
  * 
  * @author xuhon
  *
