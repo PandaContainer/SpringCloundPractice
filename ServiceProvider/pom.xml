@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.test.springcloud.provider</groupId>
-	<artifactId>ServiceProvider</artifactId>
+	<artifactId>service-provider</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>ServiceProvider</name>
 	<description>ServiceProvider project for Spring Boot</description>
@@ -22,7 +22,7 @@
 	<dependencies>
 	    <dependency>
         	<groupId>com.test.springcloud</groupId>
-			<artifactId>HelloServiceApi</artifactId>
+			<artifactId>hello-service-api</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
         </dependency>
 		<dependency>

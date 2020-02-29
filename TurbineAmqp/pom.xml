@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.test.springcloud</groupId>
-	<artifactId>TurbineAmqp</artifactId>
+	<artifactId>turbine-amqp</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>TurbineAmqp</name>
 	<description>TurbineAmqp project for Spring Boot</description>

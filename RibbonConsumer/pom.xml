@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.test.springcloud.consumer</groupId>
-	<artifactId>RibbonConsumer</artifactId>
+	<artifactId>ribbon-consumer</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>RibbonConsumer</name>
 	<description>RibbonConsumer project for Spring Boot</description>

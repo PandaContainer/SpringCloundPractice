@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.test.springcloud</groupId>
-	<artifactId>ApiGatewayDynamicFilter</artifactId>
+	<artifactId>api-gateway-dynamic-filter</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>ApiGatewayDynamicFilter</name>
 	<description>ApiGatewayDynamicFilter project for Spring Boot</description>

@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.test.springcloud</groupId>
-	<artifactId>ApiGatewayDynamicRoute</artifactId>
+	<artifactId>api-gateway-dynamic-route</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>ApiGatewayDynamicRoute</name>
 	<description>ApiGatewayDynamicRoute project for Spring Boot</description>
