@@ -1,0 +1,1 @@
+java -jar zipkin-server-2.20.0-exec.jar --RABBIT_ADDRESSES=localhost:5672 --RABBIT_USER=springcloud --RABBIT_PASSWORD=123456 --RABBIT_VIRTUAL_HOST=/ --STORAGE_TYPE=mysql --MYSQL_HOST=localhost --MYSQL_TCP_PORT=3306 --MYSQL_USER=root --MYSQL_PASS=root --MYSQL_DB=zipkin
